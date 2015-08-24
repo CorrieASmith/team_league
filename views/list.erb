@@ -1,0 +1,22 @@
+<h2><%= @team.name() %>'s players:</h2>
+
+<ul>
+  <% @team.players.each() do |task| %>
+  <li><%= player.name %></li>
+  <% end %>
+</ul>
+
+<form action="/player/new" method="post">
+  <input hidden value="<%= @team.id.to_i %>" name="team id" value="team id">
+
+  <label for="player_name">Player Name:</label>
+  <input type="text" placeholder="e.g. Russell Wilson" name="player_name" id="player_name">
+
+  <label for="team_name">:</label>
+  <input type="text" placeholder="e.g. Seattle Seahawks" name="team_name" id="team_name">
+
+  <button type="submit" class="btn btn-primary btn-sm">Add player!</button>
+  </br>
+  <a href = "/">Home</a>
+
+</form>
